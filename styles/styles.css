@@ -154,6 +154,7 @@ nav {
 }
 
 .grid div {
+  cursor: pointer;
   background-size: cover;
   padding: 20px;
   display: flex;
@@ -162,9 +163,20 @@ nav {
   min-height: 100px;
 }
 
+@keyframes background {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
 
 .grid div:hover{
-  color: var(--Black);
+  animation: background;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .creations h4 {
